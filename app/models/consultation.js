@@ -7,7 +7,11 @@ const consultationSchema = new mongoose.Schema({
     user_id: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
-    }]
+    }],
+    state:{
+        type:Boolean
+    },
+    created_on:{type:Date}
 });
 
 
