@@ -14,7 +14,7 @@ const tocSchema = new mongoose.Schema({
 
 
 // Compile our Model based on the Schema
-const toc = mongoose.model('toc', tocSchema);
+const toc = mongoose.model('Toc', tocSchema);
 
 // Export our Model for use
 module.exports = toc;
