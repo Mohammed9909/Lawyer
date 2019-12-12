@@ -16,7 +16,18 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Toc"
   }],
-  Role:{type:String,default:"customer"}
+  Role: {
+    type: String,
+    default: "customer"
+  },
+  name: {
+    type: String,
+    default: ""
+  },
+phone_no:{
+  type:Number
+}
+
 }, {
   timestamps: true,
   toObject: {
