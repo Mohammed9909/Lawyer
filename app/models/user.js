@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
   token: String,
   toc_id: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Toc"
+    ref: "typeOfConsultation"
   }],
   Role: {
     type: String,
