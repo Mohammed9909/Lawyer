@@ -7,9 +7,13 @@ const cors = require('cors')
 // require route files
 const exampleRoutes = require('./app/routes/example_routes')
 const userRoutes = require('./app/routes/user_routes')
+const indexRouter = require('./app/routes/index');
+const consultationsRouter = require('./app/routes/consultation');
+
 
 // require error handling middleware
 const errorHandler = require('./lib/error_handler')
+
 
 // require database configuration logic
 // `db` will be the actual Mongo URI as a string
@@ -25,7 +29,7 @@ const requestLogger = require('./lib/request_logger')
 const tokenOrBearer = require('./lib/token_or_bearer')
 
 // Define Ports
-const reactPort = 7165
+const reactPort = 5000
 const expressPort = 3000
 
 // establish database connection
@@ -65,6 +69,8 @@ app.use(requestLogger)
 // register route files
 app.use(exampleRoutes)
 app.use(userRoutes)
+app.use(indexRouter);
+app.use(consultationsRouter);
 
 // register error handling middleware
 // note that this comes after the route middlewares, because it needs to be
