@@ -11,6 +11,16 @@ const consultationSchema = new mongoose.Schema({
     state: {
         type: Boolean
     },
+    title: {
+        type: String,
+        default: "",
+        required: true
+      },
+      content: {
+        type: String,
+        default: "",
+        required: true
+      },
     timestamps: true
 });
 
