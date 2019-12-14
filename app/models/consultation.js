@@ -11,9 +11,7 @@ const consultationSchema = new mongoose.Schema({
     state: {
         type: Boolean
     },
-    created_on: {
-        type: Date
-    }
+    timestamps: true
 });
 
 
