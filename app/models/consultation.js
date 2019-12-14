@@ -15,12 +15,14 @@ const consultationSchema = new mongoose.Schema({
         type: String,
         default: "",
         required: true
-      },
-      content: {
+    },
+    content: {
         type: String,
         default: "",
         required: true
-      },
+    },
+
+}, {
     timestamps: true
 });
 
