@@ -9,6 +9,7 @@ const exampleRoutes = require('./app/routes/example_routes')
 const userRoutes = require('./app/routes/user_routes')
 const indexRouter = require('./app/routes/index');
 const consultationsRouter = require('./app/routes/consultation');
+const typeOfConsultation = require ('./app/routes/typeOfConsultation');
 const blogRoutes = require('./app/routes/blog')
 
 // require error handling middleware
@@ -73,6 +74,7 @@ app.use(userRoutes);
 // Use route Files
 app.use(indexRouter);
 app.use(consultationsRouter);
+app.use(typeOfConsultation);
 app.use(blogRoutes);
 
 // register error handling middleware
