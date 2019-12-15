@@ -12,7 +12,7 @@ const router = express.Router();
  */
 
 router.get('/', (req, res) => {
-    res.json({ message: 'Welcome to Blogy' })
+    res.json({ message: 'Welcome to Legal Council' })
 })
 
 //Export the Router so we can use it in the server.js file
