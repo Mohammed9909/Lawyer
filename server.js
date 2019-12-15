@@ -9,7 +9,7 @@ const exampleRoutes = require('./app/routes/example_routes')
 const userRoutes = require('./app/routes/user_routes')
 const indexRouter = require('./app/routes/index');
 const consultationsRouter = require('./app/routes/consultation');
-
+const typeOfConsultation = require ('./app/routes/typeOfConsultation');
 
 // require error handling middleware
 const errorHandler = require('./lib/error_handler')
@@ -71,6 +71,7 @@ app.use(exampleRoutes)
 app.use(userRoutes)
 app.use(indexRouter);
 app.use(consultationsRouter);
+app.use(typeOfConsultation);
 
 // register error handling middleware
 // note that this comes after the route middlewares, because it needs to be
