@@ -13,8 +13,8 @@ const router = express.Router();
 router.get('/api/typeOfConsultation', (req, res) => {
     TypeOfConsultation.find()
         // Return all typeOfConsultation as an Array
-        .then((typeOfConsultation) => {
-            res.status(200).json({ typeOfConsultation: typeOfConsultation });
+        .then((typeOfConsultations) => {
+            res.status(200).json({ typeOfConsultations: typeOfConsultations });
         })
         // Catch any errors that might occur
         .catch((error) => {
@@ -27,7 +27,7 @@ router.get('/api/typeOfConsultation', (req, res) => {
 * URI:          /api/typeOfConsultation/5d664b8b68b4f5092aba18e9
 * Description:  Get An Type Of Consultation by Type Of Consultation ID
 */
-router.get('/api/typeOfConsultation/:id', (req, res) => {
+router.get('/api/typeOfConsultations/:id', (req, res) => {
     TypeOfConsultation.findById(req.params.id)
         .then((typeOfConsultation) => {
             if (typeOfConsultation) {
@@ -54,7 +54,7 @@ router.get('/api/typeOfConsultation/:id', (req, res) => {
  * URI:         /api/typeOfConsultation
  * Description: Create a new Type Of Consultation
 */
-router.post('/api/typeOfConsultation', (req, res) => {
+router.post('/api/typeOfConsultations', (req, res) => {
     TypeOfConsultation.create(req.body.typeOfConsultation)
         // On a successful `create` action, respond with 201
         // HTTP status and the content of the new type Of Consultation.
@@ -72,7 +72,7 @@ router.post('/api/typeOfConsultation', (req, res) => {
  * URI:          /api/typeOfConsultation/5d664b8b68b4f5092aba18e9
  * Description:  Update An typeOfConsultation by typeOfConsultation ID
  */
-router.patch('/api/typeOfConsultation/:id', (req, res) => {
+router.patch('/api/typeOfConsultations/:id', (req, res) => {
     TypeOfConsultation.findById(req.params.id)
         .then((typeOfConsultation) => {
             if (typeOfConsultation) {
@@ -103,7 +103,7 @@ router.patch('/api/typeOfConsultation/:id', (req, res) => {
  * URI:          /api/typeOfConsultation/5d664b8b68b4f5092aba18e9
  * Description: Delete An typeOfConsultation by Type Of Consultation ID
  */
-router.delete('/api/typeOfConsultation/:id', (req, res) => {
+router.delete('/api/typeOfConsultations/:id', (req, res) => {
     TypeOfConsultation.findById(req.params.id)
         .then((typeOfConsultation) => {
             if (typeOfConsultation) {
