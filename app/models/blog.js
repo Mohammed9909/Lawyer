@@ -13,6 +13,10 @@ const blogSchema = new mongoose.Schema({
     default: "",
     required: true
   },
+  author: {
+    type: String,
+    ref: "User"
+  },
   content: {
     type: String,
     default: "",
