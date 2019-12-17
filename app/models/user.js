@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const toc = require("./typeOfConsultation")
+const typeOfConsultation = require("./typeOfConsultation")
 
 const userSchema = new mongoose.Schema({
   email: {
@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
     required: true
   },
   token: String,
-  toc_id: [{
+  typeOfConsultation_id: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: "typeOfConsultation"
   }],
@@ -20,14 +20,13 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: "customer"
   },
-  name: {
+  fullName: {
     type: String,
     default: ""
   },
-phone_no:{
-  type:Number
+  phoneNum:{
+    type: Number
 }
-
 }, {
   timestamps: true,
   toObject: {

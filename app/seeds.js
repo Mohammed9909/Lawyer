@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const Blog = require('./models/blog');
 const User = require('./models/user');
 
-const mongoURI = 'mongodb://localhost/mongoRelationships';
+const mongoURI = 'mongodb://localhost/legalCouncil-development';
 mongoose.connect(mongoURI, { useNewUrlParser: true }, () => {
   console.log('the connection with mongod is established')
 });
@@ -51,7 +51,7 @@ const whySoSerious = new Blog({
 // PUSH THE userS ONTO THE blog'S
 // userS ARRAY
 whySoSerious.users.push(mohammed);   // associated!
-whySoSerious.users.push(dough);
+whySoSerious.users.push(osama);
 whySoSerious.save(function (err, savedwhySoSerious) {
   if (err) {
     return console.log(err);
