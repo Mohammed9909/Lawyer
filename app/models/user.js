@@ -20,14 +20,13 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: "customer"
   },
-  name: {
+  fullName: {
     type: String,
     default: ""
   },
-phone_no:{
-  type:Number
+  phoneNum:{
+    type: Number
 }
-
 }, {
   timestamps: true,
   toObject: {
