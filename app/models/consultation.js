@@ -16,6 +16,10 @@ const consultationSchema = new mongoose.Schema({
         default: "",
         required: true
     },
+    author: {
+        type: String,
+        ref: "User"
+    },
     content: {
         type: String,
         default: "",
