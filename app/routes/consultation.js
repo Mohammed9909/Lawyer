@@ -74,7 +74,7 @@ router.post('/api/consultations', (req, res) => {
  * Description:  Update An Consultation by Consultation ID
  */
 router.patch('/api/consultations/:id', (req, res) => {
-    consultation.findById(req.params.id)
+    Consultation.findById(req.params.id)
         .then((consultation) => {
             if (consultation) {
                 //Pass the result of Mongoose's `.update` method to the next `.then`
