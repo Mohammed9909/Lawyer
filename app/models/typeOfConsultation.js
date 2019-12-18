@@ -17,6 +17,10 @@ const typeOfConsultationSchema = new mongoose.Schema({
         default: "",
         require: true
     },
+    image: {
+        type: String,
+        default: "",
+    },
 });
 
 
