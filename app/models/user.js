@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "typeOfConsultation"
   }],
-  Role: {
+  role: {
     type: String,
     default: "customer"
   },
