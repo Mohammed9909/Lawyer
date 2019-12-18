@@ -47,7 +47,9 @@ router.post('/sign-up', (req, res, next) => {
         email: req.body.credentials.email,
         hashedPassword: hash,
         fullName: req.body.credentials.fullName,
-        phoneNum: req.body.credentials.phoneNum
+        phoneNum: req.body.credentials.phoneNumr,
+        role: req.body.credentials.role,
+
 
       }
     })
