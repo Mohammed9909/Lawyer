@@ -84,7 +84,7 @@ router.patch('/api/blogs/:id', (req, res) => {
             if (blog) {
                 //Pass the result of Mongoose's `.update` method to the next `.then`
 
-                return blog.update()
+                return blog.update(req.body.blog)
             } else {
                 //if we couldn't find a document with matching ID
                 res.status(404).json({
